@@ -373,5 +373,14 @@
 		
 			<button id="keyboardButton" style="display:none; position: absolute; left: 85vw; top: 0px; font-size: 15px; height: 50px; width: 100px; -webkit-tap-highlight-color: transparent;">Open Keyboard</button>	<input type="text" id="fakeKeyboard" style="display:none; position: absolute; top: 0px; left: 85vw; width: 100px; height: 50px; opacity: 0; -webkit-tap-highlight-color: transparent;">
 			<button id="toggleControls" style="display:none; position: absolute; left: 85vw; top: 50px; font-size: 15px; height: 50px; width: 100px; -webkit-tap-highlight-color: transparent;">Toggle Controls</button>	
-		</body>
+	<script>
+window.addEventListener('beforeunload', function (e) {
+    // Trigger the confirmation dialog
+    e.preventDefault(); // This is required for some browsers
+    
+    // Modern browsers ignore this message but it's still required for compatibility
+    e.returnValue = '';
+});
+	</script>
+	</body>
 </html>
